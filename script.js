@@ -8,7 +8,7 @@ function playRound(playerSelection, computerSelection) {
   if (playerSelection === computerSelection) {
     return `It's a tie!`;
   }
-  
+
   if (playerSelection === 'rock') {
     if (computerSelection === 'paper') {
       return `You Lose! Paper beats Rock`;
@@ -17,7 +17,7 @@ function playRound(playerSelection, computerSelection) {
       return `You Won! Rock beats Scissor`
     }
   }
-  
+
   if (playerSelection === 'paper') {
     if (computerSelection === 'scissor') {
       return `You Lose! Scissor beats Paper`;
@@ -26,7 +26,7 @@ function playRound(playerSelection, computerSelection) {
       return `Your Won! Paper beats Rock`
     }
   }
-  
+
   if (playerSelection = 'scissor') {
     if (computerSelection === 'rock') {
       return `You Lose! Rock beats Scissor`;
@@ -34,31 +34,30 @@ function playRound(playerSelection, computerSelection) {
     else {
       return `You Win! Scissor beats Paper`
     }
-    
   }
 }
 
 
-function game(){
-  let playerScore=0;
-  let computerScore=0;
-  while(playerScore!==5 && computerScore!==5){
-    const playerSelection = 'rock';
+function game() {
+  let playerScore = 0;
+  let computerScore = 0;
+  while (playerScore !== 5 && computerScore !== 5) {
+    const playerSelection = 'Rock';
     const computerSelection = getComputerChoice();
-    result = playRound(playerSelection,computerSelection);
-    if(result.slice(4,5)==='W'){
-      playerScore+=1;
+    result = playRound(playerSelection.toLowerCase(), computerSelection);
+    if (result.slice(4, 5) === 'W') {
+      playerScore += 1;
     }
-    if(result.slice(4,5)==='L'){
-      computerScore+=1;
+    if (result.slice(4, 5) === 'L') {
+      computerScore += 1;
     }
-    console.log(playerScore,computerScore);
+    console.log(playerScore, computerScore);
     console.log(result)
   }
-  if(playerScore===5){
+  if (playerScore === 5) {
     console.log(`>> YOU WON THE GAME`)
   }
-  else{
+  else {
     console.log(`>> YOU LOSE THE GAME`)
   }
 }
