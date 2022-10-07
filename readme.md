@@ -4,11 +4,7 @@
 
 2. I created this game using javaScript.
 
-3. This game is currently only played using browser console.
-
-```
-Press F12 to play the game.
-```
 
 ## To Do:
 1. Add Graphical User interface
+2. Fix score for player and computer when they reaches 5.
